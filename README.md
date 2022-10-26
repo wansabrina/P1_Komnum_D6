@@ -20,8 +20,8 @@ import matplotlib.pyplot as plt
 ```
 
 Adapun persamaan yang kami gunakan untuk mencoba program dari kode ini adalah <br />
-```x^3 - 3x^2 -9x + 18```
-<br />
+```x^3 - 3x + 1```
+
 Yang didefinisikan menggunakan syntax: <br />
 ```R
 def func(x):
@@ -34,8 +34,15 @@ Selanjutnya, diset nilai x dan y untuk membuat plot <br />
 x = np.linspace(-5, 5, 100)
 y = pow(x, 3) - 3 * x + 1
 ```
+Lalu akan diinput nilai ```batas atas```, ```batas bawah```, ```jumlah iterasi maksimal```, dan ```ketelitian```<br />
+```R
+a = float(input("Masukkan batas atas: "))       
+b = float(input("Masukkan batas bawah: "))   
+max_repetition = int(input("Masukkan jumlah iterasi maksimal: "))
+accuracy = float(input("Masukkan ketelitian: "))
+```
 
-Setelah menginput nilai ```batas atas```, ```batas bawah```, ```jumlah iterasi maksimal```, dan ```ketelitian``` maka akan di cek apakah batas atas dan batas bawah memenuhi kriteria dan syarat dari bolzano <br />
+Setelah menginput nilai ```batas atas```, ```batas bawah``` maka akan di cek apakah keduanya memenuhi kriteria dan syarat dari bolzano <br />
 ```R
 if func(a) * func(b) > 0:
     print('Numbers do not meet Bolzano\'s criteria')
