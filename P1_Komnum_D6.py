@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # Persamaan
 def func(x):
-    # x^3 - 3x^2 -9x + 18
+    # x^3 - 3x + 1
     return pow(x, 3) - 3 * x + 1
 
 # Set x dan y untuk plot
