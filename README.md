@@ -25,7 +25,6 @@ Adapun persamaan yang kami gunakan untuk mencoba program dari kode ini adalah <b
 Yang didefinisikan menggunakan syntax: <br />
 ```R
 def func(x):
-    # x^3 - 3x^2 -9x + 18
     return pow(x, 3) - 3 * x + 1
 ```
 
