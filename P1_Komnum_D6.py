@@ -1,6 +1,6 @@
 # Anggota Kelompok:
 #
-# Najma Ulya Agustina      5025211239
+# Najma Ulya Agustina      5025211
 # Syarifah Talitha Erfany  5025211175
 # Wan Sabrina Mayzura      5025211023
 
@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # Persamaan
 def func(x):
-    # x^3 - 3x + 1
+    # x^3 - 3x^2 -9x + 18
     return pow(x, 3) - 3 * x + 1
 
 # Set x dan y untuk plot
@@ -41,21 +41,22 @@ plt.plot(x, y, 'r')
 plt.show()
 
 # Cetak header tabel
-print('---------------------------------------------------------------------------------------')
-print('iterasi \t a\t\t b\t\t f(a) \t\t mp\t\t f(mp)        ')
-print('---------------------------------------------------------------------------------------')
+print('------------------------------------------------------------------------------------------------------')
+print('iterasi \t a\t\t b\t\t f(a) \t\t f(b)\t\t mp\t\t f(mp)        ')
+print('------------------------------------------------------------------------------------------------------')
 
 for i in range(max_repetition):
     # Mencari middle point
     mp = (a + b)/2
     fa = func(a)
+    fb = func(b)
     fmp = func(mp)
 
     # Output hasil sesuai iterasi
-    print(str(i + 1)+'\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t' %(a, b, fa, mp, fmp))
+    print(str(i + 1)+'\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t' %(a, b, fa, fb, mp, fmp))
 
     if np.abs(func(mp)) < accuracy:
-        print('---------------------------------------------------------------------------------------')
+        print('------------------------------------------------------------------------------------------------------')
         print('The value of root is : '+ str(mp))
         exit();
         
