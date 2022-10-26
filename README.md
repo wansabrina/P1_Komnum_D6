@@ -48,26 +48,27 @@ if func(a) * func(b) > 0:
     exit() #jika tidak memenuhi kriteria bolzano, akan keluar dari program
 ```
 
-Didalam perulangan sebanyak iterasi maksimal, kita akan mencari ```middle point```, ```fa``` dan ```fmp```<br />
+Didalam perulangan sebanyak iterasi maksimal, kita akan mencari ```middle point```, ```fa```, ````fb```` dan ```fmp```<br />
 ```R
 for i in range(max_repetition):
     # Mencari middle point
     mp = (a + b)/2
     fa = func(a)
+    fb = func(b)
     fmp = func(mp)
 
     # Output hasil sesuai iterasi
-    print(str(i + 1)+'\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t' %(a, b, fa, mp, fmp))
+    print(str(i + 1)+'\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t    % 10.5f\t' %(a, b, fa, fb, mp, fmp))
 
-    if np.abs(func(mp)) < accuracy: #jika nilai fmp lebih kecil dari ketelitian, akan keluar dari program
-        print('---------------------------------------------------------------------------------------')
+    if np.abs(func(mp)) < accuracy:
+        print('------------------------------------------------------------------------------------------------------')
         print('The value of root is : '+ str(mp))
-        exit()
-
+        exit();
+        
     if func(a) * func(mp) < 0:
         b = mp
 
-    else: 
+    elif func(a) * func(mp) > 0: 
         a = mp
 ```
 
@@ -95,4 +96,4 @@ plt.show() #untuk menampilkan grafik
 
 Sehingga output setelah dijalankan akan terlihat seperti ini:
 ![image](https://user-images.githubusercontent.com/90106865/198066761-dc585522-e116-422a-b69b-2294722fd820.png) <br />
-![image](https://user-images.githubusercontent.com/90106865/198066951-ec03e0e5-3dc4-4a59-8d2e-abd65ff01f58.png) <br />
+![image](https://user-images.githubusercontent.com/90106865/198083490-c54317a7-1d97-4f0b-86a6-fcfc0f5517a1.png)
